@@ -1,0 +1,9 @@
+HumanA.cpp
+HumanA.hpp
+HumanB.cpp
+HumanB.hpp
+Makefile
+Weapon.cpp
+Weapon.hpp
+main.cpp
+temp.txt

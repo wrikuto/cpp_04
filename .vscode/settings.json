@@ -75,7 +75,9 @@
 		"stop_token": "cpp",
 		"cinttypes": "cpp",
 		"charconv": "cpp",
-		"span": "cpp"
+		"span": "cpp",
+		"queue": "cpp",
+		"deque": "cpp"
 	},
 	"C_Cpp.errorSquiggles": "disabled"
 }

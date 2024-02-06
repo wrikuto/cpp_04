@@ -6,7 +6,7 @@
 #    By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/04 21:28:10 by wrikuto           #+#    #+#              #
-#    Updated: 2024/02/05 14:06:39 by wrikuto          ###   ########.fr        #
+#    Updated: 2024/02/05 17:57:00 by wrikuto          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,20 +14,21 @@ NAME	= Zombie
 SRC		= Zombie.cpp randomChump.cpp newZombie.cpp main.cpp
 CC		= c++
 FLAGS	= -std=c++98 -Wall -Wextra -Werror
-OBJS	= $(SRC:.c=.o)
+OBJS	= $(SRC:.cpp=.o)
 
 $(NAME): $(OBJS)
 		$(CC) $(FLAGS) $(SRC) -o $(NAME)
 
 all: $(NAME) $(OBJS)
 
-%.o: %.c
+%.o: %.cpp
 		$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-		rm -rf $(NAME)
+		rm -f $(OBJS)
 
 fclean: clean
+		rm -f $(NAME)
 
 re: fclean all
 
