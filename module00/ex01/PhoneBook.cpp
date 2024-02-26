@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 16:47:34 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/20 20:40:23 by wrikuto          ###   ########.fr       */
+/*   Updated: 2024/02/26 19:02:15 by wrikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,15 @@ void	PhoneBook::search_contact() const
 
 	std::cin >> num_input;
 	if (!std::cin.good())
+	{
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		std::cout << "Wrong input. tryagain." << std::endl;
+	}
 	else if (8 <= num_input)
 		std::cout << "Number out of range." << std::endl;
 	else if (_contact[num_input].is_enter() == false)
 		std::cout << "This index not have data." << std::endl;
 	else
 		_contact[num_input].show_detail();
-
 }

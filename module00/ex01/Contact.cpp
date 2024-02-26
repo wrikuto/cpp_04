@@ -6,7 +6,7 @@
 /*   By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:12:34 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/26 15:24:20 by wrikuto          ###   ########.fr       */
+/*   Updated: 2024/02/26 19:09:34 by wrikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,14 @@ void	Contact::entering_data(size_t index)
 		
 		std::getline(std::cin, input);
 
-		if (!std::cin.good() || input.empty())
+		if (!std::cin.good())
+		{
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 			std::cout << "Error input. tryagain." << std::endl;
+		}
+		else if (input.empty() && !(i == 2 || i == 4))
+			std::cout << "This infomation can't be enpty. tryagain." << std::endl;
 		else
 		{
 			if (i == 0)
@@ -71,8 +77,6 @@ std::string	Contact::_format_len(std::string str) const
 
 void	Contact::show_all() const
 {
-	// if (this->_firstName.empty() || this->_lastName.empty() || this->_nickName.empty() || \
-	// 	this->_phoneNumber.empty())
 	if (this->_isEnter == 0)
 		return ;
 	std::cout \
@@ -86,13 +90,10 @@ void	Contact::show_all() const
 
 void	Contact::show_detail() const
 {
-	// if (this->_firstName.empty() || this->_lastName.empty() || this->_nickName.empty() || \
-	// 	this->_phoneNumber.empty())
 	if (this->_isEnter == 0)
 		return ;
 	std::cout \
 		<< "\n" \
-		<< "index number:  " << this->_index << "\n" \
 		<< "First name:  " << this->_firstName << "\n" \
 		<< "Last name:  " << this -> _lastName << "\n" \
 		<< "Nick name:  " << this -> _nickName << "\n" \

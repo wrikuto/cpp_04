@@ -6,7 +6,7 @@
 /*   By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:14:18 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/26 15:20:36 by wrikuto          ###   ########.fr       */
+/*   Updated: 2024/02/26 22:00:28 by wrikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,11 @@ int main()
 			PhoneBook.search_contact();
 		std::cout << "> " << std::flush;
 		std::cin >> input;
+		if (!std::cin.good())
+		{
+			std::cout << "Input error." << std::endl;
+			exit(1);
+		}
 	}
 	return (0);
 }
-
