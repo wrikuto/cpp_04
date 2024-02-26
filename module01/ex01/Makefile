@@ -6,11 +6,11 @@
 #    By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/05 17:48:29 by wrikuto           #+#    #+#              #
-#    Updated: 2024/02/05 20:22:07 by wrikuto          ###   ########.fr        #
+#    Updated: 2024/02/21 14:59:27 by wrikuto          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= Zombies
+NAME	= zombies
 SRCS	= main.cpp Zombie.cpp zombieHorde.cpp
 CC		= c++
 FLAGS	= -std=c++98 -Wall -Wextra -Werror

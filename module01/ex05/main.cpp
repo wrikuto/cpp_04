@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/05 21:44:46 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/21 18:10:33 by wrikuto          ###   ########.fr       */
+/*   Created: 2024/02/24 21:29:44 by wrikuto           #+#    #+#             */
+/*   Updated: 2024/02/25 18:51:12 by wrikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
+#include "Harl.hpp"
 
-#include "Weapon.hpp"
-
-class HumanA
+int main()
 {
-	private:
-		std::string	_name;
-		Weapon		&_weapon;
-	
-	public:
-		HumanA(std::string name, Weapon &weapon);
-		~HumanA() {};
-		void	attack() const;
-		
-};
+	Harl harl;
+	std::string input;
 
-#endif
+	std::cout << "Enter type:" << std::endl;
+	std::cin >> input;
+	harl.complain(input);
+
+	return (0);
+}

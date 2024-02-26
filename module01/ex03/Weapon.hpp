@@ -6,7 +6,7 @@
 /*   By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 21:44:42 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/05 21:59:53 by wrikuto          ###   ########.fr       */
+/*   Updated: 2024/02/21 18:39:34 by wrikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,14 @@
 class Weapon
 {
 	private:
-		std::string	type;
+		std::string	_type;
 	
 	public:
 		Weapon(std::string type);
-		~Weapon();
+		~Weapon() {};
 
-		void	set_type(std::string type);
-}
+		std::string	getType() const;
+		void		setType(std::string type);
+};
 
 #endif

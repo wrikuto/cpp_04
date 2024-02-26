@@ -5,34 +5,46 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/05 12:46:27 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/20 22:33:39 by wrikuto          ###   ########.fr       */
+/*   Created: 2024/02/06 22:59:56 by wrikuto           #+#    #+#             */
+/*   Updated: 2024/02/07 21:11:09 by wrikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
 
-int main()
+char	upper_case(char c)
 {
-	Zombie		*zombie1;
-	std::string	name1;
-	std::string name2;
+	char rtn = 0;
 
-	std::cout << "Enter zombie name..." << std::endl;
-	std::cin >> name1;
-	std::cout << "Ganarate heap zombie" << std::endl;
-	zombie1 = newZombie(name1);
-	zombie1->announce();
-	delete zombie1;
-
-	std::cout << "\nEnter zombie name..." << std::endl;
-	std::cin >> name2;
-	std::cout << "Ganarate stack zombie" << std::endl;
-	randomChump(name2);
-	return (0);
+	if ('a' <= c && c <= 'z')
+		rtn = c - 32;
+	else
+		rtn = c;
+	return (rtn);
 }
 
-// __attribute__((destructor))
-// static void destructor() {
-//     system("leaks -q Zombie");
-// }
+int main(int argc, char **argv)
+{
+	int	i = 1;
+	int	j;
+
+	if (argc == 1)
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
+	else
+	{
+		while (i < argc)
+		{
+			j = 0;
+			while (argv[i][j] != '\0')
+			{
+				std::cout << upper_case(argv[i][j]);
+				j++;
+			}
+			i++;
+			if (i < argc)
+				std::cout << ' ';
+		}
+		std::cout << std::endl;
+	}
+	return (0);
+}

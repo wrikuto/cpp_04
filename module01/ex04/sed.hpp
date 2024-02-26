@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   sed.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/05 21:44:46 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/21 18:10:33 by wrikuto          ###   ########.fr       */
+/*   Created: 2024/02/21 18:44:56 by wrikuto           #+#    #+#             */
+/*   Updated: 2024/02/24 18:37:00 by wrikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
+#ifndef SED_HPP
+# define SED_HPP
 
-#include "Weapon.hpp"
+# include <fstream>
+# include <iostream>
 
-class HumanA
+class Sed
 {
 	private:
-		std::string	_name;
-		Weapon		&_weapon;
-	
+		std::string	_inFile;
+		std::string	_outFile;
+
 	public:
-		HumanA(std::string name, Weapon &weapon);
-		~HumanA() {};
-		void	attack() const;
+		Sed(std::string filename);
+		~Sed() {};
+		void replace(std::string s1, std::string s2);
 		
 };
 

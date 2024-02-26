@@ -6,7 +6,7 @@
 /*   By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 21:44:39 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/05 22:00:35 by wrikuto          ###   ########.fr       */
+/*   Updated: 2024/02/21 18:39:44 by wrikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 Weapon::Weapon(std::string type)
 {
-	this->set_type(type)
+	this->_type = type;
 }
 
-Weapon::~Weapon(void)
+std::string	Weapon::getType() const
 {
-	
+	return (this->_type);
 }
 
-void	Weapon::set_type(std::string type)
+void	Weapon::setType(std::string type)
 {
-	this->type = type;
+	this->_type = type;
 }

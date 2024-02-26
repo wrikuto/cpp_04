@@ -6,11 +6,11 @@
 #    By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/05 21:42:49 by wrikuto           #+#    #+#              #
-#    Updated: 2024/02/05 21:44:25 by wrikuto          ###   ########.fr        #
+#    Updated: 2024/02/24 19:34:10 by wrikuto          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= brain
+NAME	= fight 
 SRCS	= \
 			HumanA.cpp \
 			HumanB.cpp \

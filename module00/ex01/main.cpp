@@ -5,34 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/05 12:46:27 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/20 22:33:39 by wrikuto          ###   ########.fr       */
+/*   Created: 2024/02/20 18:14:18 by wrikuto           #+#    #+#             */
+/*   Updated: 2024/02/26 15:20:36 by wrikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "PhoneBook.hpp"
 
 int main()
 {
-	Zombie		*zombie1;
-	std::string	name1;
-	std::string name2;
+	PhoneBook	PhoneBook;
+	std::string	input;
+	size_t		counter = 0;
 
-	std::cout << "Enter zombie name..." << std::endl;
-	std::cin >> name1;
-	std::cout << "Ganarate heap zombie" << std::endl;
-	zombie1 = newZombie(name1);
-	zombie1->announce();
-	delete zombie1;
-
-	std::cout << "\nEnter zombie name..." << std::endl;
-	std::cin >> name2;
-	std::cout << "Ganarate stack zombie" << std::endl;
-	randomChump(name2);
+	std::cout << "WELCOME." << std::endl;
+	while (1)
+	{
+		if (input.compare("EXIT") == 0)
+			break ;
+		else if (input.compare("ADD") == 0)
+		{
+			PhoneBook.add_contact(counter);
+			counter++;
+		}
+		else if (input.compare("SEARCH") == 0)
+			PhoneBook.search_contact();
+		std::cout << "> " << std::flush;
+		std::cin >> input;
+	}
 	return (0);
 }
 
-// __attribute__((destructor))
-// static void destructor() {
-//     system("leaks -q Zombie");
-// }

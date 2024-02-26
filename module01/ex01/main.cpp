@@ -6,7 +6,7 @@
 /*   By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 18:01:06 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/05 20:26:40 by wrikuto          ###   ########.fr       */
+/*   Updated: 2024/02/21 18:37:02 by wrikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ int main()
 
 // __attribute__((destructor))
 // static void destructor() {
-//     system("leaks -q Zombies");
+//     system("leaks -q zombies");
 // }

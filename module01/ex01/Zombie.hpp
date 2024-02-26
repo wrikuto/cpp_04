@@ -6,7 +6,7 @@
 /*   By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 18:00:35 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/05 20:30:00 by wrikuto          ###   ########.fr       */
+/*   Updated: 2024/02/21 14:56:29 by wrikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Zombie
 		std::string	_name;
 		
 	public:
+		Zombie() {};
 		~Zombie();
 		void	announce(void);
 		Zombie	*newZombie(std::string name);
