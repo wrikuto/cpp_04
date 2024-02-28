@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: wrikuto <wrikuto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:14:18 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/26 22:00:28 by wrikuto          ###   ########.fr       */
+/*   Updated: 2024/02/28 21:37:59 by wrikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int main()
 {
 	PhoneBook	PhoneBook;
 	std::string	input;
-	size_t		counter = 0;
+	// size_t		counter = 0;
 
 	std::cout << "WELCOME." << std::endl;
 	while (1)
@@ -25,8 +25,8 @@ int main()
 			break ;
 		else if (input.compare("ADD") == 0)
 		{
-			PhoneBook.add_contact(counter);
-			counter++;
+			PhoneBook.add_contact(PhoneBook.get_count());
+			PhoneBook.increment();
 		}
 		else if (input.compare("SEARCH") == 0)
 			PhoneBook.search_contact();

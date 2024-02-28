@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: wrikuto <wrikuto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:11:19 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/20 20:24:50 by wrikuto          ###   ########.fr       */
+/*   Updated: 2024/02/28 21:46:09 by wrikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,11 @@ class Contact
 		std::string	_darkest;
 		size_t		_index;
 		std::string	_format_len(std::string str) const;
+		bool		_isblank(const std::string& str);
 
 	public:
-		Contact() { this->_isEnter = false; };
-		~Contact() {};
+		Contact();
+		~Contact();
 		bool		is_enter() const;
 		void		entering_data(size_t index);
 		void		show_all() const;

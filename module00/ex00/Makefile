@@ -6,12 +6,12 @@
 #    By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/06 20:26:18 by wrikuto           #+#    #+#              #
-#    Updated: 2024/02/08 17:35:56 by wrikuto          ###   ########.fr        #
+#    Updated: 2024/02/26 19:21:18 by wrikuto          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= megaphone
-SRCS	= main.cpp
+SRCS	= megaphone.cpp
 CC		= c++
 FLAGS	= -std=c++98 -Wall -Wextra -Werror
 OBJS	= $(SRCS:.cpp=.o)

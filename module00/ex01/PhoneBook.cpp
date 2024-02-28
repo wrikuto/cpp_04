@@ -3,17 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: wrikuto <wrikuto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 16:47:34 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/26 19:02:15 by wrikuto          ###   ########.fr       */
+/*   Updated: 2024/02/28 21:36:57 by wrikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-// PhoneBook::PhoneBook() {}
-// PhoneBook::~PhoneBook() {}
+PhoneBook::PhoneBook()
+:_counter(0)
+{}
+
+PhoneBook::~PhoneBook() {};
+
+void	PhoneBook::increment()
+{
+	this->_counter += 1;
+}
+
+size_t	PhoneBook::get_count()
+{
+	return (this->_counter);
+}
+
 
 void	PhoneBook::add_contact(size_t counter)
 {

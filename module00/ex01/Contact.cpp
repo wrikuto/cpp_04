@@ -3,20 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: wrikuto <wrikuto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:12:34 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/26 19:09:34 by wrikuto          ###   ########.fr       */
+/*   Updated: 2024/02/28 21:50:50 by wrikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
+Contact::Contact()
+{
+	this->_isEnter = false;
+}
+
+Contact::~Contact() 
+{}
+
 bool	Contact::is_enter() const
 {
-	if (this->_isEnter == 1)
-		return (true);
-	return (false);
+	return (this->_isEnter);
+}
+
+bool	Contact::_isblank(const std::string& str)
+{
+	for (std::string::size_type i = 0; i < str.size(); ++i) {
+		if (!std::isspace(static_cast<unsigned char>(str[i])) || str[i] == '\n') {
+			return false;
+		}
+	}
+	return true;
 }
 
 void	Contact::entering_data(size_t index)
@@ -44,12 +60,11 @@ void	Contact::entering_data(size_t index)
 
 		if (!std::cin.good())
 		{
-			std::cin.clear();
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-			std::cout << "Error input. tryagain." << std::endl;
+			std::cout << "\nError input." << std::endl;
+			exit (1);
 		}
-		else if (input.empty() && !(i == 2 || i == 4))
-			std::cout << "This infomation can't be enpty. tryagain." << std::endl;
+		else if (input.empty() || this->_isblank(input))
+			std::cout << "Fields can't be enpty. tryagain." << std::endl;
 		else
 		{
 			if (i == 0)
