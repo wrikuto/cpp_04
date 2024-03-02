@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/05 21:44:52 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/21 18:38:17 by wrikuto          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include"HumanA.hpp"
 #include"HumanB.hpp"
 
@@ -28,7 +16,6 @@ int main()
 		jim.setWeapon(club);
 		jim.attack();
 		club.setType("some other type of club");
-		// jim.setWeapon(club);
 		jim.attack();
 	}
 	return (0);

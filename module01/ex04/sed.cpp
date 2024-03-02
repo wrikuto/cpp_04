@@ -1,21 +1,9 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   sed.cpp                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/24 19:28:37 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/24 21:26:28 by wrikuto          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "sed.hpp"
 
 Sed::Sed(std::string filename)
-:_inFile(filename)
+:inFile_(filename)
 {
-	this->_outFile = this->_inFile + ".replace";
+	this->outFile_ = this->inFile_ + ".replace";
 }
 
 
@@ -26,7 +14,7 @@ void	Sed::replace(std::string s1, std::string s2)
 	std::ofstream	outF;
 	size_t			offset;
 
-	rdF.open(this->_inFile);
+	rdF.open(this->inFile_);
 	if (rdF.fail())
 	{
 		std::cerr << "ERR: Can\'t open file." << std::endl;
@@ -36,7 +24,7 @@ void	Sed::replace(std::string s1, std::string s2)
 		std::cerr << "Empty file." << std::endl;
 	else
 	{
-		outF.open(this->_outFile);
+		outF.open(this->outFile_);
 		if (outF.fail())
 		{
 			std::cerr << "out file fail!" << std::endl;

@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   sed.hpp                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/21 18:44:56 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/24 18:37:00 by wrikuto          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef SED_HPP
 # define SED_HPP
 
@@ -19,8 +7,8 @@
 class Sed
 {
 	private:
-		std::string	_inFile;
-		std::string	_outFile;
+		std::string	inFile_;
+		std::string	outFile_;
 
 	public:
 		Sed(std::string filename);

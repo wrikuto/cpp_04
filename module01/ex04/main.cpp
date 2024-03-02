@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/21 18:44:17 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/24 21:25:52 by wrikuto          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <iostream>
 #include "sed.hpp"
 
@@ -25,7 +13,7 @@ int main(int argc, char **argv)
 	return (0);
 }
 
-__attribute__((destructor))
-static void destructor() {
-    system("leaks -q sed");
-}
+// __attribute__((destructor))
+// static void destructor() {
+//     system("leaks -q sed");
+// }

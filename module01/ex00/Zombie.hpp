@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: wrikuto <wrikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/31 16:20:13 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/20 22:35:47 by wrikuto          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef ZOMBIE_HPP
 # define ZOMBIE_HPP
 
@@ -18,7 +6,7 @@
 class Zombie
 {
 	private:
-		std::string	_name;
+		std::string	name_;
 		
 	public:
 		Zombie(std::string name);
