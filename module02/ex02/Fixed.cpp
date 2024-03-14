@@ -5,43 +5,57 @@
 Fixed::Fixed()
 :value_(0)
 {
-	std::cout << "Default constructor called" << std::endl;
+	#ifdef MSG
+		std::cout << "Default constructor called" << std::endl;
+	#endif
 }
 
 Fixed::Fixed(const int data)
 :value_(data * (0b1 << this->bits_))
 {
-	std::cout << "Int constructor called" << std::endl;
+	#ifdef MSG
+		std::cout << "Int constructor called" << std::endl;
+	#endif
 }
 
 Fixed::Fixed(const float data)
 :value_(std::roundf(data * (0b1 << this->bits_)))
 {
-	std::cout << "Float constructor called" << std::endl;
+	#ifdef MSG
+		std::cout << "Float constructor called" << std::endl;
+	#endif
 }
 
 Fixed::Fixed(const Fixed &src)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	#ifdef MSG
+		std::cout << "Copy constructor called" << std::endl;
+	#endif
 	*this = src;
 }
 
 Fixed	&Fixed::operator=(const Fixed &src)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
+	#ifdef MSG
+		std::cout << "Copy assignment operator called" << std::endl;
+	#endif
 	this->setRawBits(src.getRawBits());
 	return (*this);
 }
 
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called" << std::endl;
+	#ifdef MSG
+		std::cout << "Destructor called" << std::endl;
+	#endif
 }
 
-
+// utils -------------------------------------------------
 int		Fixed::getRawBits() const
 {
-	std::cout << "getRawBits() member function called" << std::endl;
+	#ifdef MSG
+		std::cout << "getRawBits() member function called" << std::endl;
+	#endif
 	return (this->value_);
 }
 
@@ -61,6 +75,7 @@ int		Fixed::toInt(void) const
 }
 
 
+// operator funcs --------------------------------------
 bool	Fixed::operator>(const Fixed &num)
 {
 	return (this->value_ > num.getRawBits());
@@ -93,40 +108,53 @@ bool	Fixed::operator!=(const Fixed &num)
 
 Fixed	Fixed::operator+(const Fixed &num)
 {
-	return (this->toFloat() + num.toFloat());
+	return (Fixed(this->toFloat() + num.toFloat()));
 }
 
 Fixed	Fixed::operator-(const Fixed &num)
 {
-	return (this->toFloat() - num.toFloat());
+	return (Fixed(this->toFloat() - num.toFloat()));
 }
 
 Fixed	Fixed::operator*(const Fixed &num)
 {
-	return (this->toFloat() * num.toFloat());
+	return (Fixed(this->toFloat() * num.toFloat()));
 }
 
 Fixed	Fixed::operator/(const Fixed &num)
 {
-	return (this->toFloat() / num.toFloat());
+	return (Fixed(this->toFloat() / num.toFloat()));
 }
 
 Fixed	&Fixed::operator++(void)
 {
-	this->value_++;
+	this->value_ += 1;
 	return (*this);
 }
 
 Fixed	Fixed::operator++(int)
 {
-	Fixed	temp(this->value_ * toFloat());
-	
+	Fixed	temp(*this);
 
-
+	this->value_ += 1;
+	return (temp);
 }
 
+Fixed	&Fixed::operator--(void)
+{
+	this->value_ -= 1;
+	return (*this);
+}
 
+Fixed	Fixed::operator--(int)
+{
+	Fixed	temp(*this);
 
+	this->value_ -= 1;
+	return (temp);
+}
+
+// get min max utils ---------------------------------
 Fixed	&Fixed::min(Fixed &a, Fixed &b)
 {
 	if (a.getRawBits() < b.getRawBits())
@@ -155,8 +183,7 @@ const Fixed	&Fixed::max(const Fixed &a, const Fixed &b)
 	return (a);
 }
 
-
-
+// ostream overload ------------------------------------
 std::ostream	&operator<<(std::ostream &stream, const Fixed &num)
 {
 	stream << num.toFloat();

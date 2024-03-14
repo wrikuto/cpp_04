@@ -1,6 +1,6 @@
 NAME	= fixed
 CC		= c++
-CFLAGS	= -std=c++98 -Wall -Wextra -Werror
+CFLAGS	= -std=c++98 -Wall -Wextra -Werror #-DMSG
 
 SRCS	= main.cpp Fixed.cpp
 OBJS	= $(SRCS:.cpp=.o)
