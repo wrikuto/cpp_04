@@ -32,10 +32,12 @@ int main( void )
 // 	std::cout << "a after a++: " << a << std::endl;
 // 	std::cout << "b: " << b << std::endl;
 // 	std::cout << "max(a, b): " << Fixed::max(a, b) << std::endl;
+// 	std::cout << "min(a, b): " << Fixed::min(a, b) << std::endl;
 // 	std::cout << "q: " << q << std::endl;
 // 	std::cout << "q+q+q+q: " << q + q + q + q << std::endl;
 // 	q = q + a;
 // 	std::cout << "q = q + a: " << q << std::endl;
 // 	std::cout << "a * q: " << a * q << std::endl;
+
 // 	return (0);
 // }
