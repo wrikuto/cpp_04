@@ -38,14 +38,17 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &src)
 
 void	ClapTrap::attack(const std::string& target)
 {
-	if (this->ep_ == 0)
+	if (this->hp_ <= 0 || this->ep_ <= 0)
 	{
-		std::cout << "ClapTrap is out of energy points!" << std::endl;
+		if (this->hp_ <= 0)
+			std::cout << "ClapTrap is out of hit points!" << std::endl;
+		else
+			std::cout << "ClapTrap is out of energy points!" << std::endl;
 		return;
 	}
 	std::cout \
 		<< "ClapTrap " << this->name_ << " attacks " << target \
-		<< " causing  " << this->atk_ << " points of damage!"  \
+		<< " causing " << this->atk_ << " points of damage!"  \
 		<< std::endl;
 	this->ep_ -= 1;
 }
@@ -61,10 +64,13 @@ void	ClapTrap::takeDamage(int amount)
 
 void	ClapTrap::beRepaired(int amount)
 {
-	if (this->ep_ == 0)
+	if (this->hp_ <= 0 || this->ep_ <= 0)
 	{
-		std::cout << "ClapTrap is out of energy points!" << std::endl;
-		return ;
+		if (this->hp_ <= 0)
+			std::cout << "ClapTrap is out of hit points!" << std::endl;
+		else
+			std::cout << "ClapTrap is out of energy points!" << std::endl;
+		return;
 	}
 	this->hp_ += amount;
 	this->ep_ -= 1;

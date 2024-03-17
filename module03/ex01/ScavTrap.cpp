@@ -41,9 +41,12 @@ ScavTrap	&ScavTrap::operator=(const ScavTrap &src)
 
 void	ScavTrap::attack(const std::string &target)
 {
-	if (this->ep_ == 0)
+	if (this->hp_ <= 0 || this->ep_ <= 0)
 	{
-		std::cout << "ScavTrap is out of energy points!" << std::endl;
+		if (this->hp_ <= 0)
+			std::cout << "ScavTrap is out of hit points!" << std::endl;
+		else
+			std::cout << "ScavTrap is out of energy points!" << std::endl;
 		return;
 	}
 	std::cout \
@@ -55,5 +58,5 @@ void	ScavTrap::attack(const std::string &target)
 
 void	ScavTrap::guardGate()
 {
-	std::cout << "ScavTrap " << this->name_ << " is now in Gate keeper mode." << std::endl;
+	std::cout << "ScavTrap " << this->name_ << " is guarding a gate." << std::endl;
 }

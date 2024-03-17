@@ -40,9 +40,12 @@ FragTrap	&FragTrap::operator=(const FragTrap &src)
 
 void	FragTrap::attack(const std::string &target)
 {
-	if (this->ep_ == 0)
+	if (this->hp_ <= 0 || this->ep_ <= 0)
 	{
-		std::cout << "FragTrap is out of energy points!" << std::endl;
+		if (this->hp_ <= 0)
+			std::cout << "FragTrap is out of hit points!" << std::endl;
+		else
+			std::cout << "FragTrap is out of energy points!" << std::endl;
 		return;
 	}
 	std::cout \
