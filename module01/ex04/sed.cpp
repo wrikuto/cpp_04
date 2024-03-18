@@ -18,7 +18,7 @@ void	Sed::replace(std::string s1, std::string s2)
 	if (rdF.fail())
 	{
 		std::cerr << "ERR: Can\'t open file." << std::endl;
-		exit(1);
+		std::exit(1);
 	}
 	if ( !(std::getline(rdF, line, '\0')) )
 		std::cerr << "Empty file." << std::endl;
@@ -28,7 +28,7 @@ void	Sed::replace(std::string s1, std::string s2)
 		if (outF.fail())
 		{
 			std::cerr << "out file fail!" << std::endl;
-			exit(1);
+			std::exit(1);
 		}
 		offset = line.find(s1);
 		while (offset != std::string::npos)
