@@ -10,9 +10,9 @@ ScavTrap::ScavTrap(std::string name)
 :ClapTrap(name)
 {
 	std::cout << "--ScavTrap constructor called" << std::endl;
-	this->hp_ = 100;
-	this->ep_ = 50;
-	this->atk_ = 20;
+	this->hp_ = ScavTrap::scav_hp_;
+	this->ep_ = ScavTrap::scav_ep_;
+	this->atk_ = ScavTrap::scav_akt_;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &src)

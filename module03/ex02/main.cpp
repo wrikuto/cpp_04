@@ -8,10 +8,10 @@ int main(void)
 	// ScavTrap	s_man("soma");
 
 	man1.takeDamage(95);
+	man1.highFivesGuys();
 	man1.attack("Jack");
 	man1.takeDamage(5);
 	man1.beRepaired(5);
-	man1.highFivesGuys();
 	
 	// test = man1;
 	// test.attack("hoooo");
@@ -21,5 +21,5 @@ int main(void)
 	// s_man.takeDamage(5);
 	// s_man.beRepaired(5);
 	
-
+	return (0);
 }

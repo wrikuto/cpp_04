@@ -55,6 +55,11 @@ void	ClapTrap::attack(const std::string& target)
 
 void	ClapTrap::takeDamage(int amount)
 {
+	if (hp_ <= 0)
+	{
+		std::cout << "CrapTrap " << this->name_ << " is out of hit points!" << std::endl;
+		return ;
+	}
 	std::cout \
 		<< "ClapTrap " << this->name_ \
 		<< " takes " << amount << " points of damage!" \

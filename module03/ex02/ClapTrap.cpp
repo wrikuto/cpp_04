@@ -7,7 +7,7 @@ ClapTrap::ClapTrap()
 }
 
 ClapTrap::ClapTrap(std::string name)
-:name_(name), hp_(10), ep_(10), atk_(0)
+:name_(name), hp_(clap_hp_), ep_(clap_ep_), atk_(clap_atk_)
 {
 	std::cout << "--ClapTrap constructor called." << std::endl;
 }
@@ -55,6 +55,11 @@ void	ClapTrap::attack(const std::string& target)
 
 void	ClapTrap::takeDamage(int amount)
 {
+	if (hp_ <= 0)
+	{
+		std::cout << "CrapTrap " << this->name_ << " is out of hit points!" << std::endl;
+		return ;
+	}
 	std::cout \
 		<< "ClapTrap " << this->name_ \
 		<< " takes " << amount << " points of damage!" \

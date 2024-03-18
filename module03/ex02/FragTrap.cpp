@@ -10,9 +10,9 @@ FragTrap::FragTrap(std::string name)
 :ClapTrap(name)
 {
 	std::cout << "--FragTrap constructor called" << std::endl;
-	this->hp_ = 100;
-	this->ep_ = 100;
-	this->atk_ = 30;
+	this->hp_ = FragTrap::frag_hp_;
+	this->ep_ = FragTrap::frag_ep_;
+	this->atk_ = FragTrap::frag_atk_;
 }
 
 FragTrap::FragTrap(const FragTrap &src)

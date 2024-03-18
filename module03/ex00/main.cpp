@@ -7,6 +7,8 @@ int main(void)
 
 	man1.attack("Jack");
 	man1.takeDamage(10);
+	man1.takeDamage(10);
+	man1.takeDamage(10);
 	man1.beRepaired(5);
 
 	// test = man1;
