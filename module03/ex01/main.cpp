@@ -9,9 +9,9 @@ int main(void)
 	// test = man1;
 
 	man1.attack("Jack");
+	man1.guardGate();
 	man1.takeDamage(100);
 	man1.beRepaired(5);
-	man1.guardGate();
 
 	// test.attack("hoo");
 

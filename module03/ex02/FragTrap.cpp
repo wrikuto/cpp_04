@@ -50,7 +50,7 @@ void	FragTrap::attack(const std::string &target)
 	}
 	std::cout \
 		<< "FragTrap " << this->name_ << " attacks " << target \
-		<< " causing  " << this->atk_ << " points of damage!"  \
+		<< " causing " << this->atk_ << " points of damage!"  \
 		<< std::endl;
 	this->ep_ -= 1;
 }
