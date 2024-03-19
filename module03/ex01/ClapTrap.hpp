@@ -15,9 +15,9 @@ class ClapTrap
 		int				hp_;
 		int				ep_;
 		int				atk_;
+		ClapTrap();
 
 	public:
-		ClapTrap();
 		ClapTrap(std::string	name);
 		ClapTrap(const ClapTrap	&src);
 		virtual ~ClapTrap();

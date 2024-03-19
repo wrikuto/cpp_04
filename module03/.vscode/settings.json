@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.asm": "asm-collection",
         "iosfwd": "cpp",
         "__bit_reference": "cpp",
         "__config": "cpp",
@@ -59,6 +60,26 @@
         "typeinfo": "cpp",
         "unordered_map": "cpp",
         "utility": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "__verbose_abort": "cpp",
+        "charconv": "cpp",
+        "clocale": "cpp",
+        "condition_variable": "cpp",
+        "iomanip": "cpp",
+        "numbers": "cpp",
+        "semaphore": "cpp",
+        "thread": "cpp",
+        "variant": "cpp",
+        "*.tcc": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "deque": "cpp",
+        "memory_resource": "cpp",
+        "numeric": "cpp",
+        "random": "cpp",
+        "format": "cpp",
+        "span": "cpp",
+        "stop_token": "cpp",
+        "cinttypes": "cpp"
     }
 }
