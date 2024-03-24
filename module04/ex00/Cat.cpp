@@ -4,12 +4,13 @@
 Cat::Cat()
 {
 	std::cout << "--Cat default constructor called." << std::endl;
+	this->type_ = "Cat";
 }
 
-Cat::Cat(std::string name)
-:cat_name_(name)
+Cat::Cat(Cat const &src)
 {
-	std::cout << "--Cat constructor called." << std::endl;
+	std::cout << "--Copy Cat constructor called." << std::endl;
+	*this = src;
 }
 
 Cat::~Cat()
@@ -17,18 +18,13 @@ Cat::~Cat()
 	std::cout << "--Cat destructor called." << std::endl;
 }
 
-Cat	&Cat::operator=(const Cat &src)
+Cat	&Cat::operator=(Cat const &src)
 {
-	this->cat_name_ = src.cat_name_;
+	this->type_ = src.type_;
 	return (*this);
 }
 
-void		Cat::makeSound() const
+void	Cat::makeSound() const
 {
 	std::cout << "myaaah" << std::endl;
-}
-
-std::string	Cat::getType() const
-{
-	return (this->cat_name_);
 }

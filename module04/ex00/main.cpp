@@ -2,29 +2,59 @@
 #include "Animal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
 int main()
 {
-	Animal	hoge("test");
-	Animal 	*cat = new Cat("maro");
-	Animal	*dog = new Dog("shou");
-
-	std::cout << "\n" << hoge.getType() << ": ";
-	hoge.makeSound();
-	std::cout << cat->getType() << ": ";
-	cat->makeSound();
-	std::cout << dog->getType() << ": ";
-	dog->makeSound();
+	const Animal *meta = new Animal();
+	const Animal *j = new Dog();
+	const Animal *i = new Cat();
 
 	std::cout << std::endl;
 
-	delete cat;
-	delete dog;
+	std::cout << "Animal getType(): " << meta->getType() << " " << std::endl;
+	std::cout << "Dog getType(): " << j->getType() << " " << std::endl;
+	std::cout << "Cat getType(): " << i->getType() << " " << std::endl;
+
+	std::cout << std::endl;
+
+	meta->makeSound();
+	i->makeSound();
+	j->makeSound();
+
+	std::cout << std::endl;
+
+	const WrongAnimal *wrong_animal = new WrongAnimal();
+	const WrongCat *wrong_cat= new WrongCat();
+
+	std::cout << std::endl;
+
+	std::cout \
+		<< "WrongAnimal getType(): " << wrong_animal->getType() << " " \
+		<< std::endl;
+	std::cout \
+		<< "WrongCat getType(): " << wrong_cat->getType() << " " \
+		<< std::endl;
+
+	std::cout << std::endl;
+	
+	wrong_animal->makeSound();
+	wrong_cat->makeSound();
+
+	std::cout << std::endl;
+
+	delete meta;
+	delete i;
+	delete j;
+	delete wrong_animal;
+	delete wrong_cat;
 
 	return (0);
+
 }
 
-__attribute__((destructor))
-static void destructor() {
-    system("leaks -q a.out");
-}
+// __attribute__((destructor))
+// static void destructor() {
+//     system("leaks -q animal_0");
+// }
