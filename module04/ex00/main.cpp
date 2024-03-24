@@ -10,12 +10,17 @@ int main()
 	const Animal *meta = new Animal();
 	const Animal *j = new Dog();
 	const Animal *i = new Cat();
+	Animal	test = *i;
+	Animal	test2(*i);
 
 	std::cout << std::endl;
 
 	std::cout << "Animal getType(): " << meta->getType() << " " << std::endl;
 	std::cout << "Dog getType(): " << j->getType() << " " << std::endl;
 	std::cout << "Cat getType(): " << i->getType() << " " << std::endl;
+	std::cout << "test getType(): " << test.getType() << " " << std::endl;
+	std::cout << "test2 getType(): " << test2.getType() << " " << std::endl;
+	
 
 	std::cout << std::endl;
 
