@@ -44,7 +44,7 @@ Dog	&Dog::operator=(Dog const &src)
 
 void	Dog::makeSound() const
 {
-	std::cout << "myaaah" << std::endl;
+	std::cout << "wanwan" << std::endl;
 }
 
 void	Dog::setBrain(std::string idea) const
