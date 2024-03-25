@@ -14,7 +14,6 @@ class Sed
 		Sed(std::string filename);
 		~Sed() {};
 		void replace(std::string s1, std::string s2);
-		
 };
 
 #endif

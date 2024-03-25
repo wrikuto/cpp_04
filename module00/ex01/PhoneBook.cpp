@@ -6,7 +6,7 @@
 /*   By: wrikuto <wrikuto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 16:47:34 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/28 21:36:57 by wrikuto          ###   ########.fr       */
+/*   Updated: 2024/03/02 16:04:00 by wrikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ size_t	PhoneBook::get_count()
 {
 	return (this->_counter);
 }
-
 
 void	PhoneBook::add_contact(size_t counter)
 {

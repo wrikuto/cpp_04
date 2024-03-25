@@ -9,7 +9,7 @@ Cat::Cat()
 
 Cat::Cat(Cat const &src)
 {
-	std::cout << "--Copy Cat constructor called." << std::endl;
+	std::cout << "--Cat copy constructor called." << std::endl;
 	*this = src;
 }
 

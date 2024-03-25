@@ -41,5 +41,4 @@ void	Sed::replace(std::string s1, std::string s2)
 		outF.close();
 	}
 	rdF.close();
-
 }

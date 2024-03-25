@@ -38,6 +38,7 @@ int main()
 	Dog *dog1 = new Dog();
 	Dog *dog2 = new Dog(*dog1);
 	Dog	tmpDog = *dog2;
+	// Animal *test = new Animal();
 
 	// アドレスの表示
 	std::cout << "\nCopied ideas\n" << std::endl;

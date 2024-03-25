@@ -1,19 +1,20 @@
 #include "ClapTrap.hpp"
+#include <iostream>
 
 int main(void)
 {
 	ClapTrap	man1("Jonny");
-	// ClapTrap	test;
+	// ClapTrap	man2;
 
-	man1.attack("Jack");
-	man1.takeDamage(10);
-	man1.takeDamage(10);
+	std::cout << std::endl;
+
+	man1.attack("jeb");
+	man1.takeDamage(5);
+	man1.beRepaired(5);
 	man1.takeDamage(10);
 	man1.beRepaired(5);
 
-	// test = man1;
-
-	// test.attack("hoo");
+	std::cout << std::endl;
 
 	return (0);
 }

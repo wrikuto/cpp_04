@@ -1,4 +1,4 @@
-NAME	= fight
+NAME	= fight 
 SRCS	= \
 			HumanA.cpp \
 			HumanB.cpp \

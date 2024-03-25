@@ -6,7 +6,7 @@
 /*   By: wrikuto <wrikuto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:12:34 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/28 21:50:50 by wrikuto          ###   ########.fr       */
+/*   Updated: 2024/03/25 19:59:41 by wrikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Contact::Contact()
 	this->_isEnter = false;
 }
 
-Contact::~Contact() 
+Contact::~Contact()
 {}
 
 bool	Contact::is_enter() const
@@ -61,7 +61,7 @@ void	Contact::entering_data(size_t index)
 		if (!std::cin.good())
 		{
 			std::cout << "\nError input." << std::endl;
-			exit (1);
+			std::exit (1);
 		}
 		else if (input.empty() || this->_isblank(input))
 			std::cout << "Fields can't be enpty. tryagain." << std::endl;

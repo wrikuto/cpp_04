@@ -1,15 +1,14 @@
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
 
-# include <iostream>
 # include "ClapTrap.hpp"
 
 class ScavTrap: public ClapTrap
 {
 	private:
-		const static int	scav_hp_ = 100;
-		const static int	scav_ep_ = 50;
-		const static int	scav_akt_ = 20;
+		const static unsigned int	scav_hp_ = 100;
+		const static unsigned int	scav_ep_ = 50;
+		const static unsigned int	scav_akt_ = 20;
 		ScavTrap();
 
 	public:

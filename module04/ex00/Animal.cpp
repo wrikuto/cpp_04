@@ -4,12 +4,12 @@
 Animal::Animal()
 :type_("Animal")
 {
-	std::cout << "--Defuault Animal constructor called." << std::endl;
+	std::cout << "--Animal defuault constructor called." << std::endl;
 }
 
 Animal::Animal(Animal const &src)
 {
-	std::cout << "--Copy Animal constructor called." << std::endl;
+	std::cout << "--Animal copy constructor called." << std::endl;
 	*this = src;
 }
 
@@ -20,6 +20,7 @@ Animal::~Animal()
 
 Animal	&Animal::operator=(Animal const &src)
 {
+	std::cout << "--Animal operator overload called." << std::endl;
 	this->type_ = src.type_;
 	return (*this);
 }

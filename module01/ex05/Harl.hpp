@@ -15,7 +15,6 @@ class Harl
 		Harl() {};
 		~Harl() {};
 		void	complain(std::string str);
-
 };
 
 typedef void	(Harl::*func_Harl) ();

@@ -6,7 +6,7 @@
 /*   By: wrikuto <wrikuto@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:14:18 by wrikuto           #+#    #+#             */
-/*   Updated: 2024/02/28 21:37:59 by wrikuto          ###   ########.fr       */
+/*   Updated: 2024/03/02 15:59:45 by wrikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int main()
 {
 	PhoneBook	PhoneBook;
 	std::string	input;
-	// size_t		counter = 0;
 
 	std::cout << "WELCOME." << std::endl;
 	while (1)

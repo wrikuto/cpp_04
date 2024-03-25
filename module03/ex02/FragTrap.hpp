@@ -6,9 +6,9 @@
 class FragTrap: public ClapTrap
 {
 	private:
-		const static int	frag_hp_ = 100;
-		const static int	frag_ep_ = 100;
-		const static int	frag_atk_ = 30;
+		const static unsigned int	frag_hp_ = 100;
+		const static unsigned int	frag_ep_ = 100;
+		const static unsigned int	frag_atk_ = 30;
 		FragTrap();
 
 	public:

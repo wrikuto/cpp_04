@@ -6,15 +6,15 @@
 class ClapTrap
 {
 	private:
-		const static int	clap_hp_ = 10;
-		const static int	clap_ep_ = 10;
-		const static int	clap_atk_ = 0;
+		const static unsigned int	clap_hp_ = 10;
+		const static unsigned int	clap_ep_ = 10;
+		const static unsigned int	clap_atk_ = 0;
 
 	protected:
 		std::string		name_;
-		int				hp_;
-		int				ep_;
-		int				atk_;
+		unsigned int	hp_;
+		unsigned int	ep_;
+		unsigned int	atk_;
 		ClapTrap();
 
 	public:
